@@ -14,7 +14,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 
-public class fileProcessingTests {
+public class FileProcessingTests {
     private String filesFolder = "./src/test/resources/files/";
 
     @Test
@@ -41,11 +41,11 @@ public class fileProcessingTests {
 
     @Test
     void checkContentOfXlsxFile() throws Exception {
-        XLS xlsFile = new XLS(new File(filesFolder + "/file.xlsx"));
-        assertThat(xlsFile, XLS.containsText("Это"));
-        assertThat(xlsFile, XLS.containsText("xls"));
-        assertThat(xlsFile, XLS.containsText("file"));
-        assertThat(xlsFile, XLS.containsText("."));
+        XLS xlsxFile = new XLS(new File(filesFolder + "/file.xlsx"));
+        assertThat(xlsxFile, XLS.containsText("Это"));
+        assertThat(xlsxFile, XLS.containsText("xls"));
+        assertThat(xlsxFile, XLS.containsText("file"));
+        assertThat(xlsxFile, XLS.containsText("."));
     }
 
     @Test
